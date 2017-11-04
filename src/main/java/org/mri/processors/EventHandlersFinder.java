@@ -14,9 +14,9 @@ import java.lang.annotation.Annotation;
 import java.util.*;
 
 public class EventHandlersFinder {
-    private static final String AXON_EVENT_HANDLER = "@org.axonframework.eventhandling.annotation.EventHandler";
-    private static final String AXON_EVENT_SOURCING_HANDLER = "@org.axonframework.eventsourcing.annotation.EventSourcingHandler";
-    private static final String AXON_SAGA_HANDLER = "@org.axonframework.saga.annotation.SagaEventHandler";
+    private static final String AXON_EVENT_HANDLER = "@org.axonframework.eventhandling.EventHandler";
+    private static final String AXON_EVENT_SOURCING_HANDLER = "@org.axonframework.eventsourcing.EventSourcingHandler";
+    private static final String AXON_SAGA_HANDLER = "@org.axonframework.eventhandling.saga.SagaEventHandler";
 
     private Map<CtTypeReference, List<CtMethodImpl>> methodMap = new HashMap<>();
 

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandHandlersFinder {
-    private static final String AXON_COMMAND_HANDLER = "@org.axonframework.commandhandling.annotation.CommandHandler";
+    private static final String AXON_COMMAND_HANDLER = "@org.axonframework.commandhandling.CommandHandler";
 
     private Map<CtTypeReference, CtMethodImpl> methods = new HashMap<>();
 

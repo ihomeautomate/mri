@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AggregatesFinder {
-    public static final String AXON_AGGREGATE_IDENTIFIER_ANNOTATION =
-            "@org.axonframework.eventsourcing.annotation.AggregateIdentifier";
+    private static final String AXON_AGGREGATE_IDENTIFIER_ANNOTATION =
+            "@org.axonframework.commandhandling.model.AggregateIdentifier";
     private List<CtTypeReference> aggregates = new ArrayList<>();
 
     private class Processor extends AbstractProcessor<CtFieldImpl> {
