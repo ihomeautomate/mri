@@ -4,11 +4,11 @@ apply plugin: 'maven'
 group = 'org.mri'
 version = '1.0.3'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = org.gradle.api.JavaVersion.VERSION_13
+targetCompatibility = org.gradle.api.JavaVersion.VERSION_13
 
 repositories {
-     maven { url "http://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
 
 dependencies {
@@ -32,7 +32,9 @@ jar {
     }
 }
 
-task showClasspath << {
-  it.println sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+task showClasspath {
+    doLast {
+        it.println sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+    }
 }
 
